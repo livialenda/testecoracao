@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Cartinha para Gustavo 💖</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="carta">
+    <h1>Meu amor, Gustavo 💌</h1>
+    <p>
+      Desde o dia <strong>18/06/2023</strong>, minha vida ficou mais feliz, mais bonita e mais completa...<br><br>
+      Obrigada por tudo 💖
+    </p>
+    
+    <div class="contador" id="contadorDias">
+      Estamos juntos há ... dias 💘
+    </div>
+
+    <p class="assinatura">Com todo meu amor,<br>Livia diva💕</p>
+
+    <div class="heart">💖</div>
+
+    <button class="button" onclick="mostrarMensagem()">Clique aqui </button>
+
+    <div class="message" id="mensagem">
+      Te amo mais do que palavras podem dizer... pra sempre! 💞
+    </div>
+  </div>
+
+  <div class="musica">
+    <audio autoplay loop>
+      <source src="voce-tim-maia.mp3" type="audio/mpeg">
+
+    </audio>  <button onclick="document.querySelector('audio').play()">🎵</button>
+
+    
+  </div>
+
+  <script>
+    function mostrarMensagem() {
+      document.getElementById('mensagem').style.display = 'block' ;
+    }
+
+    function atualizarContador() {
+      const dataInicio = new Date("2023-06-18");
+      const hoje = new Date();
+      dataInicio.setHours(0, 0, 0, 0);
+      hoje.setHours(0, 0, 0, 0);
+      const diferenca = hoje - dataInicio;
+      const dias = Math.floor(diferenca / (1000 * 60 * 60 * 24));
+      document.getElementById("contadorDias").textContent =
+        `Estamos juntos há ${dias} dias 💘`;
+    }
+
+    atualizarContador();
+  </script>
+</body>
+</html>

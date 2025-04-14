@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+body {
+   background-color: rgb(245, 206, 238);
+     font-family: "Playwrite", Arial, Helvetica, sans-serif;
+     text-align: center;
+     padding-top: 50px;
+     font-weight: 400;
+     font-style: normal;
+  
+  
+}
+
+body {
+height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
+
+}
+
+.carta {
+  background: #fff;
+  padding: 40px;
+  border: 2px dashed #ff99c8;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  text-align: center;
+  max-width: 600px;
+  animation: fadeIn 2s ease forwards;
+}
+
+h1 {
+  font-family: 'Alex Brush', cursive;
+  font-size: 36px;
+  color: #ff3399;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.assinatura {
+  margin-top: 30px;
+  font-style: italic;
+  color: #888;
+}
+
+.heart {
+  font-size: 24px;
+  color: #ff3399;
+  margin-top: 20px;
+  animation: pulse 1.5s infinite;
+}
+
+.button {
+  background-color: #ff66b2;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+  transition: background 0.3s;
+}
+
+.button:hover {
+  background-color: #ff3385;
+}
+
+.message {
+  display: none;
+  margin-top: 20px;
+  color: #333;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.contador {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #ff3399;
+  font-weight: bold;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+button {
+  --glow-color: rgb(217, 176, 255);
+  --glow-spread-color: rgba(233, 171, 219, 0.781);
+  --enhaced-glow-color: rgb(231, 206, 255);
+  --btn-color: rgb(219, 181, 255);
+
+  border: .25em solid var(--glow-color);
+  padding: 1em 3em;
+  color: var(--glow-color);
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+  background-color: var(--btn-color);
+  border-radius: 1em;
+  outline: none;
+  box-shadow: 0 0 1em .25em var(--glow-color),
+              0 0 4em 1em var(--glow-spread-color),
+              inset 0 0 0.75em .25em var(--glow-color);
+  text-shadow: 0 0 .5em var(--glow-color);
+  position: relative;
+  transition: all 0.3s;
+  
+}
+
+button::after{
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  top: 120%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--glow-spread-color);
+  filter: blur(2em);
+  opacity: .7;
+  transform: perspective(1.5em) rotateX(35deg) scale(1, .6)
+}
+
+button:hover{
+  color: var(--btn-color);
+  background-color: var(--glow-color);
+  box-shadow: 0 0 1em .25em var(--glow-color),
+              0 0 4em 2em var(--glow-spread-color);
+              inset: 0 0 .75em .25em var(--glow-color);
+}
+
+button:active{
+  box-shadow: 0 0 0.6em .25em var(--glow-color)
+              0 0 2.5em 2em var(--glow-spread-color);
+              inset: 0 0 .5em .25em var(--glow-color);
+}
+
+
